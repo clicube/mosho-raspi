@@ -87,7 +87,6 @@ func (m *MoshoApi) RecordEnv(env *domain.Env) error {
 }
 
 func (m *MoshoApi) GetIrCommands() ([]*domain.IrCommand, error) {
-	log.Println("MoshoApi.GetIrCommands() invoked")
 
 	req, err := http.NewRequest("GET", baseUrl+"/api/v1/ac/commands", nil)
 	if err != nil {
@@ -98,7 +97,6 @@ func (m *MoshoApi) GetIrCommands() ([]*domain.IrCommand, error) {
 	req.SetBasicAuth(m.basicUser, m.basicPass)
 	req.Header.Set("Content-Type", "application/json")
 
-	log.Println("Getting IR Commands ...")
 	res, err := m.client.Do(req)
 	if err != nil {
 		log.Printf("Request : %+v", req)
@@ -114,7 +112,6 @@ func (m *MoshoApi) GetIrCommands() ([]*domain.IrCommand, error) {
 	}
 	log.Printf("Status: %s", res.Status)
 
-	log.Println("Parsing IR Commands ...")
 	var jsoncmds []jsonIrCommand
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
@@ -143,7 +140,6 @@ func (m *MoshoApi) GetIrCommands() ([]*domain.IrCommand, error) {
 }
 
 func (m *MoshoApi) DeleteIrCommand(cmd *domain.IrCommand) error {
-	log.Println("MoshoApi.DeleteIrCommand() invoked")
 
 	url := baseUrl + "/api/v1/ac/commands/" + strconv.FormatInt(cmd.Id, 10)
 	req, err := http.NewRequest("DELETE", url, nil)
@@ -155,7 +151,6 @@ func (m *MoshoApi) DeleteIrCommand(cmd *domain.IrCommand) error {
 	req.SetBasicAuth(m.basicUser, m.basicPass)
 	req.Header.Set("Content-Type", "application/json")
 
-	log.Println("Deleting IR Command ...")
 	res, err := m.client.Do(req)
 	if err != nil {
 		log.Printf("Request : %+v", req)

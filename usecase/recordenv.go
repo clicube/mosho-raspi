@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"log"
+	"fmt"
 
 	"mosho-raspi/domain"
 )
@@ -12,11 +12,9 @@ type RecordEnv struct {
 }
 
 func (u *RecordEnv) Invoke() error {
-	log.Println("usecase.RecordEnv invoked")
 	env, err := u.EnvGetter.GetEnv()
 	if err != nil {
-		log.Println("Error: Failed to get env")
-		return err
+		return fmt.Errorf("Failed to get env: %s", err)
 	}
 	err = u.EnvRecorder.RecordEnv(env)
 	return err

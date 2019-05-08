@@ -1,6 +1,7 @@
 package usecase
 
 import (
+	"fmt"
 	"log"
 
 	"mosho-raspi/domain"
@@ -13,12 +14,10 @@ type SendIr struct {
 }
 
 func (u *SendIr) Invoke() error {
-	log.Println("usecase.SendIr invoked")
 
 	cmds, err := u.IrCommandRepository.GetIrCommands()
 	if err != nil {
-		log.Println("Error: Failed to get commands")
-		return err
+		return fmt.Errorf("Failed to get commands: %s", err)
 	}
 
 	for _, cmd := range cmds {
