@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 type MultiEnvRecorder struct {

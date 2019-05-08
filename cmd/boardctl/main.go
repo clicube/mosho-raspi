@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"raspi/presentation"
+	"mosho-raspi/presentation"
 )
 
 func main() {

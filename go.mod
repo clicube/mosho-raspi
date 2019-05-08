@@ -1,4 +1,4 @@
-module raspi
+module mosho-raspi
 
 go 1.12
 

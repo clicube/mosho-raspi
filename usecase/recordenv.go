@@ -3,7 +3,7 @@ package usecase
 import (
 	"log"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 type RecordEnv struct {

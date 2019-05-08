@@ -13,7 +13,7 @@ import (
 	"github.com/gofrs/flock"
 	"github.com/tarm/serial"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 const (

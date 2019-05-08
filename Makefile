@@ -13,7 +13,7 @@ test:
 	go test ./...
 
 remote-copy: build
-	scp ./bin/boardctl raspi:services/raspi-extboard/raspi/
+	scp ./bin/boardctl raspi:services/raspi-extboard/mosho-raspi/
 
 remote-envs: remote-copy
 	ssh raspi "cd services/raspi-extboard/raspi && ./boardctl envs"

@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 
-	"raspi/registory"
-	"raspi/usecase"
+	"mosho-raspi/registory"
+	"mosho-raspi/usecase"
 )
 
 func CmdlineExecute() error {

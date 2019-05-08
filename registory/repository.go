@@ -3,8 +3,8 @@ package registory
 import (
 	"fmt"
 
-	"raspi/domain"
-	"raspi/infrastructure"
+	"mosho-raspi/domain"
+	"mosho-raspi/infrastructure"
 )
 
 func EnvGetter() (domain.EnvGetter, error) {

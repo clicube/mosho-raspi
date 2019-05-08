@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 type MoshoApi struct {

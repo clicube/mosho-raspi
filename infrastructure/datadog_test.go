@@ -3,7 +3,7 @@ package infrastructure
 import (
 	"testing"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 type MockDatadogClient struct{}

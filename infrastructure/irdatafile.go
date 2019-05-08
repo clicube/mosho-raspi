@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 type IrDataFile struct {

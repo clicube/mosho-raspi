@@ -5,7 +5,7 @@ import (
 
 	"github.com/DataDog/datadog-go/statsd"
 
-	"raspi/domain"
+	"mosho-raspi/domain"
 )
 
 type GaugeSender interface {
