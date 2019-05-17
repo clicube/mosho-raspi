@@ -16,6 +16,10 @@
       "interval": 550,
       "pattern": "H(8)L(4)E73045BAH"
     },
+    "light-on-night":{
+      "interval": 550,
+      "pattern": "H(8)L(4)E730F10EH"
+    },
     "light-off":{
       "interval": 550,
       "pattern": "H(8)L(4)E730D12EH"
